@@ -19,7 +19,7 @@ The `savepos <index>` command saves your current location to the specified index
 
 The `loadpos <index>` command teleports you to the location saved to the specified index.
 
-The `lastpos` command teleports you to the location most recently accessed by `loadpos`. Note that in doing so, it also saves your current location, allowing you to swap between your current location and the most recently teleported location.
+The `lastpos` command teleports you to the last location you were at before teleporting.
 
 # Example
 https://github.com/kevinhquach/cs2-savepos-lua/assets/8755691/68aca612-6a9b-4a4d-b25b-f7982e9db9fc

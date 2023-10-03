@@ -33,4 +33,4 @@ Convars:RegisterCommand("lastpos", function()
             teleportPlayer(player, player.lastPos)
         end
     end
-end, "Teleports player to last teleported position", 0)
+end, "Teleports player to last position before teleporting", 0)
