@@ -2,17 +2,19 @@
 Enables saving and loading multiple positions in CS2.
 Note that this requires the usage of a lua-enabled vscript.dll, which may become unsupported.
 
-**This requires the modification of dynamic link libraries, which may trigger VAC bans, continue at your own risk.**
+**This may require the modification of dynamic link libraries, which may trigger VAC bans, continue at your own risk.**
 
 Consider setting up a server running with the -insecure flag, rather than using a modified vscript.dll on your own account.
 
 # Installation
-1. Replace the original `vscript.dll` in `Counter-Strike Global Offensive\game\bin\win64` with a lua-enabled `vscript.dll`, such as from https://github.com/bklol/vscriptPatch
-    * **This modifies dynamic link libraries.** If you intend to play on VAC-secured servers, keep the original vscript.dll to replace the modified file. If in doubt as to whether the vscript.dll file is modified, delete it and verify CS2's game files' integrity from steam.
-    * Using the -insecure launch option is **highly recommended** when using modified binaries, preventing you from accidentally connecting to VAC-secured servers.
-    * Alternatively, use `luaVscriptInsecureLauncher.bat` to launch CS2 in insecure mode while replacing vscript.dll automatically. Note that this method only works for launching CS2 as a client, on your Steam account, which may potentially be at risk of triggering VAC.
-        * Be sure to update `vscriptEnabledFile` to point to where your lua-enabled `vscript.dll` is for the launcher to work.
-2. Place `savepos.lua` in `Counter-Strike Global Offensive\game\csgo\scripts\vscripts`
+1. Enable lua vscripts. Two options for doing this are listed below:
+   1. **Recommended:** Install https://github.com/Source2ZE/LuaUnlocker on a server.
+   2. Replace the original `vscript.dll` in `Counter-Strike Global Offensive\game\bin\win64` with a lua-enabled `vscript.dll`, such as from https://github.com/bklol/vscriptPatch
+      * **This modifies dynamic link libraries.** If you intend to play on VAC-secured servers, keep the original vscript.dll to replace the modified file. If in doubt as to whether the vscript.dll file is modified, delete it and verify CS2's game files' integrity from steam.
+      * Using the -insecure launch option is **highly recommended** when using modified binaries, preventing you from accidentally connecting to VAC-secured servers.
+      * Alternatively, use `luaVscriptInsecureLauncher.bat` to launch CS2 in insecure mode while replacing vscript.dll automatically. Note that this method only works for launching CS2 as a client, on your Steam account, which may potentially be at risk of triggering VAC.
+         * Be sure to update `vscriptEnabledFile` to point to where your lua-enabled `vscript.dll` is for the launcher to work.
+3. Place `savepos.lua` in `Counter-Strike Global Offensive\game\csgo\scripts\vscripts`
 
 # Usage
 In console, enter `sv_cheats 1; script_reload_code savepos` to enable the vscript. (This can be added to any `server.cfg` or `nadepractice.cfg`.)
