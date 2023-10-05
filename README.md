@@ -10,8 +10,9 @@ Consider setting up a server running with the -insecure flag, rather than using 
 1. Enable lua vscripts. Two options for doing this are listed below:
    1. **Recommended:** Install https://github.com/Source2ZE/LuaUnlocker on a server.
    2. Replace the original `vscript.dll` in `Counter-Strike Global Offensive\game\bin\win64` with a lua-enabled `vscript.dll`, such as from https://github.com/bklol/vscriptPatch
+      * # ❗❗❗ VAC Bans can trigger with this method, despite -insecure, as of October 5th 2023 ❗❗❗
       * **This modifies dynamic link libraries.** If you intend to play on VAC-secured servers, keep the original vscript.dll to replace the modified file. If in doubt as to whether the vscript.dll file is modified, delete it and verify CS2's game files' integrity from steam.
-      * Using the -insecure launch option is **highly recommended** when using modified binaries, preventing you from accidentally connecting to VAC-secured servers.
+      * Using the -insecure launch option is **highly recommended** when using modified binaries, preventing you from accidentally connecting to official VAC-secured servers. ❗❗❗ **Attempting to connect to VAC servers with a modified vscript.dll will trigger a VAC Ban, despite -insecure.** ❗❗❗
       * Alternatively, use `luaVscriptInsecureLauncher.bat` to launch CS2 in insecure mode while replacing vscript.dll automatically. Note that this method only works for launching CS2 as a client, on your Steam account, which may potentially be at risk of triggering VAC.
          * Be sure to update `vscriptEnabledFile` to point to where your lua-enabled `vscript.dll` is for the launcher to work.
 3. Place `savepos.lua` in `Counter-Strike Global Offensive\game\csgo\scripts\vscripts`
